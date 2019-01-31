@@ -1,0 +1,438 @@
+/* global */
+@font-face
+{
+font-family: headingFont;
+src: url('../fonts/Kratos TrueType.ttf'),
+     url('../fonts/Kratos TrueType.eot'); /* IE9 */
+}
+
+ul{
+	padding: 0;
+	margin:0;
+	margin-left:15px;
+}
+body{
+	font-size: 15px;
+}
+#main{
+	padding-left:10px;
+}
+
+
+/*focus inputs*/
+.form-control:focus {
+	border-color: #2a41eb;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+	outline: none;
+    border: none;
+}
+
+h1,h3{
+	padding:20px;
+}
+h1{
+	font-size: 3em;
+}
+h3{
+	font-size: 2em;
+}
+.clear{
+	clear:both;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+li{
+	list-style: none;
+}
+
+/* labels for forms */
+/*label{
+	display: inline-block;
+	font-weight: bold;
+}
+.navbar-collapse{
+	max-height: none;
+}
+/* notiications */
+/*message_box{
+	padding-left: 30px;
+}*/
+
+/* icons */
+/*.icon{
+	background-repeat: no-repeat;
+	display: inline-block;
+}*/
+.icon-comment{
+	/*background-image: url(../images/icons/comment.png);*/
+	background-repeat: no-repeat;
+	width: 47px;
+	height: 41px;
+}
+.icon-notifications, .icon-mail{
+	/* margin-right: 2px; */
+	/* margin-left: 3px; */
+	/* margin-bottom: -2px; */
+}
+.icon-mail{
+	/*background-image: url(../images/icons/mail.png);*/
+	/* width: 21px; */
+	/* height: 15px; */
+}
+.icon-notifications{
+	/*background-image: url(../images/icons/notifications.png);*/
+	width: 10px;
+	height: 15px;
+}
+
+/*  errors */
+.error, .success{
+	position: fixed;
+	top:105px;
+	left:25%;
+	width:auto;
+	max-width:500px;
+	z-index: 1030;
+	overflow: auto;
+}
+.error .alert,.success .alert{
+	margin-bottom: 0;
+}
+
+/* header */
+header{
+	min-width: 1730px;
+	padding-bottom: 30px;
+	color:#FFF;
+}
+
+
+.col-small-1{
+	width: 4.16%;
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#login .input-group{
+	padding:0;
+}
+#terms_box .row{
+	margin:0 auto;
+}
+footer{
+	padding:30px;
+	clear: both;
+}
+
+
+
+
+
+/*ingredients box*/
+#ingredient_box, #ingredient_details_box{
+	border:1px solid black;
+	width: 441px;
+	min-height: 448px;
+	height: 200px;
+	float: left;
+	padding: 0 5px 0 5px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	overflow:auto;
+	margin-right: 10px;
+}
+#ingredient_box.dropdown #ingredients{
+	min-height: 150px;
+	max-height: 210px;
+}
+#ingredient_box.dropdown{
+	width: 200px;
+	background: #FFF;
+	min-height: 150px;
+	height: auto;
+}
+#food_groups{
+	 width: 320px;
+}
+#ingredient_details_box{
+	padding-left:15px;
+	padding-right: 15px;
+}
+#ingredient_box{
+	 /* border: 1px solid transparent; */
+	 overflow-y: auto;
+}
+#ingredient_details_box .btn{
+	margin-top:10px;
+}
+#ingredient_box .btn-default, #ingredient_box .btn-info{
+	padding: 0px 5px;
+	float: right;
+	font-size: 0.8em;
+	margin: 1px 27px 0 0;
+}
+#ingredient_box h2, #ingredient_details_box h2{
+	padding-left:1em;
+}
+#ingredient_box #ingredients, #food_group_box #food_groups{
+	overflow-x: hidden;
+	/* max-height: 231px; */
+	/* min-height:116px; */
+	overflow-y: auto;
+}
+#ingredients li, #food_groups li{
+	width: 100%;
+	margin-left: 24px;
+	padding-left: 6px;
+}
+#ingredients ul, #food_groups ul{
+	display: none;
+}
+#ingredient_box #ingredients div, #food_group_box #food_groups div{
+	cursor:pointer;
+	padding-left: 3px;
+	/* color: green; */
+}
+#food_group_box .foodGroup:hover{
+	background: #2b3e50;
+}
+#food_group_box .foodGroup:hover li{
+	/*color: green;*/
+}
+#ingredient_box #ingredients .ingredients:hover, #ingredient_box #ingredients .foodGroup:hover{
+	background: #2b3e50;/*same as background color*/
+	/*color:#FFF; */
+}
+#ingredient_box #ingredients .foodGroup:not(.noChildren):hover .caret, #food_group_box #food_groups .foodGroup:not(.noChildren):hover .caret{
+	/*same as background color*/
+	border-top: 9px solid #FFF;
+}
+#ingredient_box #ingredients .foodGroup:not(.noChildren):hover .caret-right,  #food_group_box #food_groups .foodGroup:not(.noChildren):hover .caret-right{
+	/*same as background color*/
+	border-left: 9px solid #FFF;
+}
+
+/*no children food groups*/
+#ingredient_box div.noChildren .caret-right, #food_group_box #food_groups div.noChildren .caret-right,
+#ingredient_box div.noChildren:hover .caret-right, #food_group_box #food_groups div.noChildren:hover .caret-right{
+	border-left-color: #999;
+}
+
+#ingredient_box #ingredients div div .caret, #food_group_box #food_groups div div .caret{
+	margin-top:6px;
+	margin-right: 4px;
+	float: left;
+	border-top: 9px solid #2b3e50;
+	border-right: 9px solid transparent;
+	border-left: 9px solid transparent;
+}
+#ingredient_box div .caret-right, #food_group_box div .caret-right{
+	float: left;
+	margin: 2px 8px 0 4px;
+	border-top: 9px solid transparent;
+	border-right: 0 dotted;
+	border-bottom: 9px solid transparent;
+	border-left: 9px solid #2b3e50;
+	display: block;
+}
+
+#ingredient_box li{
+	width: 100%;
+	display: block;
+	color: #FFF;
+}
+#ingredient_box.dropdown li, #food_group_box li{
+	width: 100%;
+	display: block;
+	color: #2b3e50;
+}
+#ingredient_box.dropdown .ingredients:hover li, #ingredient_box.dropdown .foodGroup:hover li, #food_group_box .foodGroup:hover li{
+	color: #FFF;
+}
+/* the currently selected option */
+#ingredient_box .active, #food_group_box li.active{
+	background-color: #2b3e50;
+}
+#ingredient_box .active > li, #food_group_box li.active{
+	color: #FFF;
+}
+
+.percent_30{
+	width:30%;
+	padding:15px;
+	float: left;
+	margin:0 auto;
+}
+
+#about_us_image{
+	min-width: 410px;
+}
+
+#add_edit_recipe{
+	width:80%;
+	margin:0 auto;
+}
+.step_number{
+	float: right;
+	margin-top: 8px;
+}
+
+
+/*more than 768px*/
+@media (min-width: 768px){
+	header{
+		padding-bottom: 100px;
+	}
+	#login{
+		width:330px;
+		margin-top:14px;
+		margin-left: 25px;
+	}
+	
+	#login input, #login label, #login-link a{
+		height:20px;
+		font-size: .6em;
+		padding:3px;
+	}
+	#login input[type="text"], #login input[type="password"]{
+		width: 10em;
+	}
+	#login-link{
+		margin-top:-5px;
+	}
+	#login-link div{
+		height: 10px;
+		width:100px;
+	}
+	#register{
+		width:800px;
+	}
+
+	/* main part of homepage */
+	.home #main{
+		padding-left:50px;
+	}
+
+	label{
+		width:11em;
+	}
+}
+
+/*ingredient page*/
+#covering{
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	opacity: .5;
+	display: none;
+}
+
+/*less than 768px*/
+@media (max-width: 768px){
+	.container > .navbar-collapse #login{
+		width:425px;
+		padding-left: 30px;
+	}
+	#login{
+		font-size: 1.2em;
+	}
+	header{
+		padding-bottom: 0px;
+	}
+	.error, .success{
+		width:75% !important;
+		right: 5%;
+		left: 5%;
+		margin:0 auto;
+	}
+	.row .btn.btn-right{
+		/*margin: 0px 15px 0 -17px;*/
+	}
+}
+/*greater than 992px*/
+@media (min-width: 992px) {
+	header{
+		padding-bottom: 50px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1210px;
+	}
+	header{
+		padding-bottom: 20px;
+	}
+}
+
+
+@media (min-width: 1400px) {
+	.container {
+		width: 1370px;
+	}
+}
+
+@media (max-width: 1095px) {
+	.percent_30{
+		width:90%;
+		padding:15px;
+		float: left;
+	}
+	.right-side{
+		/*clear:both;*/
+		width:90%;
+	}
+	#about_us_image{
+		text-align: center;
+	}
+	#add_edit_recipe{
+		width: auto;
+	}
+}
+
+#add_edit_recipe .row{
+	margin:0;
+}
+
+.ingredient_dropdown option, .food_group_dropdown option{
+	display: none;
+}
+#ingredient_details_box input, #ingredient_details_box select{
+	/* width: 16em; */
+	padding: 7px;
+	border-radius: 5px;
+	/* margin-top: 8px; */
+}
+#ingredient_details_box label{
+	margin-top: 8px;
+}
+.food_group_dropdown{
+	/* margin-left: 4px; */
+}
+
+.edit_recipe #ingredient_box .btn,.add_recipe #ingredient_box .btn, #food_group_box .btn{
+	 display: none; 
+}
+#food_group_box{
+	z-index: 101;
+	border-radius: 7px;
+    border: 1px solid transparent;
+}
+#food_group_box #food_groups{
+	overflow: hidden;
+    border-radius: 7px;
+}
+
+select[multiple], select[size] {
+	height: 70px;
+}

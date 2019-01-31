@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule api/(.*) api/api.php?request=$1 [QSA,NC,L]
+
+RewriteRule ^((recipe|ingredients).*) api/app.php?request=$1 [QSA,NC,L]
+RewriteRule (forgot-password/.*) api/app.php?request=$1 [QSA,NC,L]
+RewriteRule (logout)$ index.php?$1 [QSA,NC,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) api/app.php?dynamic=$1 [QSA,NC,L]
+</IfModule>

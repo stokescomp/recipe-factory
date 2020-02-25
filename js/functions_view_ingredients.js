@@ -109,7 +109,7 @@ function clickAddIngredient(){
 	details = "<label for='input_name_add'>Name:</label> <input type='text' id='input_name_add' class='form-control' />"+
 		"<label for='input_food_group'>In Food Group:</label>"+
 		"<select class='food_group_dropdown form-control' id='input_food_group' onmousedown='clickFoodGroupDropdown(this)'>"+
-		"<option>None: Top Level Food Group</option></select>"+
+		"<option value='0'>None: Top Level Food Group</option></select>"+
 		"<label for='input_calories_per_ounce_add'>Calories / Ounce:</label> <input type='text' id='input_calories_per_ounce_add' class='form-control' />"+
 		"<label for='input_special_qualities_add'>Special Qualitites:</label> <input type='text' id='input_special_qualities_add' class='form-control' />"+
 		"<a class='btn btn-success' href='#' onclick='addIngredient()'>Add New</a>";
@@ -147,7 +147,7 @@ function clickAddFoodGroup(){
 	details = "<label for='input_name_add'>Name:</label> <input type='text' id='input_name_add' class='form-control' />"+
 		"<label for='input_food_group'>In Food Group:</label>"+
 		"<select class='food_group_dropdown form-control' id='input_food_group' onmousedown='clickFoodGroupDropdown(this)'>"+
-			"<option>None: Top Level Food Group</option></select>"+
+			"<option value='0'>None: Top Level Food Group</option></select>"+
 		"<a class='btn btn-success' href='#' onclick='addFoodGroup()'>Add New</a>";
 	$('#ingredient_details_add').html(details);
 }

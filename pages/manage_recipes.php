@@ -4,7 +4,7 @@ $page = "manage_recipes";
 $header_message = "Manage Recipes for The Recipe Factory";
 require('../includes/init.php');
 require($_SERVER['DOCUMENT_ROOT'].'/page_includes/header.php');
-$sql = "SELECT * FROM recipe";
+$sql = "SELECT * FROM recipe ORDER BY title";
 $recipeList = $db->FetchAll($sql);
 ?>
 <article id="main">
@@ -12,7 +12,10 @@ $recipeList = $db->FetchAll($sql);
 	<p>Manage Recipes information</p>
    	<?php
 	foreach($recipeList as $eachRecipe){
-		echo "<p><a href='/recipe-factory/recipe/edit/{$eachRecipe['recipe_id']}'>".htmlspecialchars($eachRecipe['title'], ENT_QUOTES)."</a></p>";
+		echo "<p>
+		<a href='/recipe-factory/recipe/view/{$eachRecipe['recipe_id']}'>View</a>
+		<a href='/recipe-factory/recipe/edit/{$eachRecipe['recipe_id']}'>Edit ".htmlspecialchars($eachRecipe['title'], ENT_QUOTES)."</a>
+		</p>";
 	}
    	?>	
 	</div>

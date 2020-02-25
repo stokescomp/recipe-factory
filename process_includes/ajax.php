@@ -76,7 +76,7 @@ if(isset($_POST['edit_ingredient'])){
 		//see if the food group exists.
 		$sql = "SELECT food_group_id FROM {$prepend_table}food_group WHERE food_group_id = ?";
 		$data = $db->FetchArray($sql, 'i', $new_food_group_id);
-		if(count($data['food_group_id']) == 0){
+		if(empty($data['food_group_id'] )){
 			$error = true;
 			$message = 'You need to enter an existing food group. Pick a number next to a food group. Later we will make this user friendly.';
 		}
@@ -108,7 +108,7 @@ if(isset($_POST['edit_ingredient'])){
 			//see if the food group exists.
 			$sql = "SELECT food_group_id FROM {$prepend_table}food_group WHERE food_group_id = ?";
 			$data = $db->FetchArray($sql, 'i', $new_food_group_id);
-			if(count($data['food_group_id']) == 0){
+			if(empty($data['food_group_id'])){
 				$error = true;
 				$message = 'You need to enter an existing food group. Pick a number next to a food group. Later we will make this user friendly.';
 			}

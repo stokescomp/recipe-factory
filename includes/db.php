@@ -8,7 +8,7 @@ if($localdev){
 	$databaseHost = 'localhost';
 	$databaseName = 'recipe_factory';
 	$databaseUser = 'rf_web_user';
-	$databasePass = '$h^kK3@jDo)od@A*#';
+	$databasePass = '$h^kK3@jDood@A*#';
 }
 else {
 	$prepend_table = 'recipe_factory_';

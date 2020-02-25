@@ -215,7 +215,7 @@
     {
       try
       {
-        $this->PDO = new PDO($connectionString, $username, $password);
+        $this->PDO = new PDO($connectionString, $username, $password, null);
         $this->PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       }
       catch (Exception $e)

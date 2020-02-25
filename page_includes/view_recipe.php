@@ -1,4 +1,3 @@
-Cooking is fun!<br />This is in the included file.
 <?php echo '<h3>title: '.$_POST['title'].'</h3>';
 echo '<h3>subtitle: '.$_POST['subtitle'].'</h3>';
 echo '<h3>description: '.$_POST['description'].'</h3>';
@@ -24,12 +23,8 @@ echo '<h3>Servering Type: '.$_POST['serving_type'].'</h3>';
 print_r($serving_type_list);
 // echo '</pre>';
 //get the type
-//foreach($serving_type_list as $each_type){
+foreach($serving_type_list as $each_type){
 	echo $each_type['name'].': '.$each_type['serving_type_id'].'<br/>';
-//}
-
-foreach($serving_type_list) as $each_type){
-	if current id == each_type id
 }
 
 

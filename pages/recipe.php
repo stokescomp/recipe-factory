@@ -2,7 +2,7 @@
 //think about changing the dropdowns for choosing multiple options into either checkboxes or labels with an x to remove 
 //and an add button to pick from a list to add. Look at how gmail lets you add people to an email: there is an x to the right of the people.
 require('../includes/init.php');
-echo $action;
+// echo $action;
 if($action == 'edit'){
 	$title = "Edit Recipe";
 	$page = "edit_recipe";
